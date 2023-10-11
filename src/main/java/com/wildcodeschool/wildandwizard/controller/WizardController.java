@@ -1,6 +1,7 @@
 package com.wildcodeschool.wildandwizard.controller;
 
 import com.wildcodeschool.wildandwizard.entity.Wizard;
+import com.wildcodeschool.wildandwizard.repository.WizardDao;
 import com.wildcodeschool.wildandwizard.repository.WizardRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WizardController {
-        private final WizardRepository repository;
-        public WizardController(WizardRepository repositoryInjected){
+        private final WizardDao repository;
+        public WizardController(WizardDao repositoryInjected){
             this.repository = repositoryInjected;
         }
 
